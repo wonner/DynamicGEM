@@ -57,7 +57,7 @@ def model_batch_predictor_v2(model, X, batch_size):
         pdb.set_trace()    
 
 def batch_generator_ae(X, beta, batch_size, shuffle):
-    number_of_batches = X.shape[0] / batch_size
+    number_of_batches = X.shape[0] // batch_size
     counter = 0
     sample_index = np.arange(X.shape[0])
     if shuffle:
